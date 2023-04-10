@@ -16,7 +16,14 @@ public class ChildThread extends Thread{
 	public void run() {
 		
 		for(int i=1;i<=n;i++) {
-			System.out.println(msg);
+			try {
+				Thread.sleep(500);
+			}
+			catch(InterruptedException e) {
+				System.out.println(msg);
+			}
+			System.out.println(msg+i);
+
 		}
 		
 	}
